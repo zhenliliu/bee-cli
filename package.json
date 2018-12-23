@@ -1,0 +1,38 @@
+{
+  "name": "bee-cli",
+  "version": "1.0.0",
+  "description": "基于node集成koa + antd + ant-mobile + iceFrame + redux的框架脚手架工具",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "bin": {
+    "bee": "./bin/command.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhenliliu/bee-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhenliliu/bee-cli/issues"
+  },
+  "homepage": "https://github.com/zhenliliu/bee-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "download-git-repo": "^1.1.0",
+    "handlebars": "^4.0.12",
+    "inquirer": "^6.2.1",
+    "log-symbols": "^2.2.0",
+    "node-cmd": "^3.0.0",
+    "ora": "^3.0.0"
+  },
+  "devDependencies": {
+    "glob": "^7.1.3"
+  }
+}
