@@ -21,10 +21,14 @@ program.command("init <ProjectName>")
                 const spinner = ora('downloading...');
                 if(options.useRedux === 'y' || options.useRedux === 'yes' || options.useRedux === '是'){
                     spinner.start()
-                    download("https://github.com/zhenliliu/bee-cli",projectName, {clone: false}, (error) => {
+                    download("github.com:zhenliliu/ssr-scaffold",projectName, {clone: false}, (error) => {
                         if(error) {
                             console.log('error', error)
                             spinner.fail('下载失败')
+                            process.exit()
+                        }else {
+                            spinner.succeed('初始化成功')
+                            process.exit()
                         }
                     })
                 } else if (options.useRedux === 'n' || options.useRedux === 'no' || options.useRedux === '否'){
