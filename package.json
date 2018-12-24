@@ -1,5 +1,5 @@
 {
-  "name": "bee-cli",
+  "name": "@l/bee-cli",
   "version": "1.0.0",
   "description": "基于node集成koa + antd + ant-mobile + iceFrame + redux的框架脚手架工具",
   "main": "index.js",
