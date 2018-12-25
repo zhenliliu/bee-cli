@@ -26,23 +26,19 @@ function initProject(projectName) {
             text: `正在加载，请稍后⌛...  \n`,
             spinner: 'bouncingBar'
         });
-        if(options.useRedux){
-            spinner.start()
-            download("github.com:zhenliliu/ssr-scaffold#master",projectName, {clone: false}, (error) => {
-                if(error) {
-                    console.log('error', error)
-                    spinner.fail('下载失败')
-                    process.exit()
-                }else {
-                    spinner.succeed('初始化成功')
-                    console.log(symbols.info,chalk.green(`cd ${projectName}; npm install; npm run dev`))
-                    process.exit()
-                    
-                }
-            })
-        } else {
-            console.log('不使用redux', options)
-        }
+        spinner.start()
+        download(`github.com:zhenliliu/ssr-scaffold#${options.ui}`,projectName, {clone: false}, (error) => {
+            if(error) {
+                console.log('error', error)
+                spinner.fail('下载失败')
+                process.exit()
+            }else {
+                spinner.succeed('初始化成功')
+                console.log(symbols.info,chalk.green(`cd ${projectName}; npm install; npm run dev`))
+                process.exit()
+                
+            }
+        })
     })
 }
 
