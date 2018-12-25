@@ -2,46 +2,21 @@
 
 const fs        = require('fs')
 const cmd       = require('node-cmd')
-const ora       = require('ora');
 const chalk     = require('chalk');
 const symbols   = require('log-symbols');
 const program   = require('commander')
-const inquirer  = require('inquirer');
-const download  = require('download-git-repo');
-const promptOptions = require('./promptOptions')
+const init      = require('./init')
 program.version("0.0.1")
 
 program.command("init <ProjectName>")
     .description("create a new Project")
     .action(function(projectName) {
         if(!fs.existsSync(projectName)) {
-            initProject(projectName)
+            init(projectName)
         } else {
             console.log(symbols.warning, chalk.red(`文件${projectName}已经存在`)); 
         }
     })
-function initProject(projectName) {
-    inquirer.prompt(promptOptions).then((options) => {
-        const spinner = ora({
-            text: `正在加载，请稍后⌛...  \n`,
-            spinner: 'bouncingBar'
-        });
-        spinner.start()
-        download(`github.com:zhenliliu/ssr-scaffold#${options.ui}`,projectName, {clone: false}, (error) => {
-            if(error) {
-                console.log('error', error)
-                spinner.fail('下载失败')
-                process.exit()
-            }else {
-                spinner.succeed('初始化成功')
-                console.log(symbols.info,chalk.green(`cd ${projectName}; npm install; npm run dev`))
-                process.exit()
-                
-            }
-        })
-    })
-}
-
 console.log(
     [
       '    ████                             ',
