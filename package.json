@@ -1,6 +1,6 @@
 {
   "name": "bee-ssr-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "基于node集成koa + antd + ant-mobile + ice + fusion/next + redux的框架脚手架工具",
   "main": "index.js",
   "directories": {
