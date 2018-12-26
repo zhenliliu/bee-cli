@@ -17,17 +17,7 @@ program.command("init <ProjectName>")
             console.log(symbols.warning, chalk.red(`文件${projectName}已经存在`)); 
         }
     })
-console.log(
-    [
-      '    ████                           ',
-      '   ░░███                           ',
-      '    ░███████   ████████   ████████ ',
-      '    ░███░░███ ░███░░░░   ░███░░░░  ',
-      '    ░███ ░███ ░██████    ░██████   ',
-      '    ░███ ░███ ░███░░     ░███░░    ',
-      '   ████████   ░████████  ░████████ ',
-      '   ░░░░░      ░░░░░░░░   ░░░░░░░░  ', 
-    ].join('\n'))
+
 
 program.parse(process.argv)
 
