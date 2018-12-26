@@ -13,10 +13,10 @@ module.exports = [
       name   : 'ui',       
       message: '请选用技术栈:',      
       choices:[
-          {name: 'koa + redux',              value: 'koa-redux'},
           {name: 'koa + redux + antd',       value: 'koa-redux-antd'},
-          {name: 'koa + redux + ant-mobile', value: 'koa-redux-ant-mobile'},
-          {name: 'koa + redux + ice',        value: 'koa-redux-ice'},
+          // {name: 'koa + redux + ant-mobile', value: 'koa-redux-ant-mobile'},
+          // {name: 'koa + redux + ice',        value: 'koa-redux-ice'},
+          // {name: 'koa + redux + alifd/next', value: 'koa-redux-alifd/next'},
       ],
       when: function(options) {
           return options.useRedux
@@ -28,8 +28,9 @@ module.exports = [
       message: '请选用技术栈:',      
       choices:[
           {name: 'koa + antd',       value: 'koa-antd'},
-          {name: 'koa + ant-mobile', value: 'koa-ant-mobile'},
-          {name: 'koa + ice',        value: 'koa-ice'},
+          // {name: 'koa + ant-mobile', value: 'koa-ant-mobile'},
+          // {name: 'koa + ice',        value: 'koa-ice'},
+          // {name: 'koa + alifd/next', value: 'koa-alifd/next'},
       ],
       when: function(options) {
           return !options.useRedux
