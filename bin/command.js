@@ -2,6 +2,7 @@
 
 const fs        = require('fs')
 const cmd       = require('node-cmd')
+const path      = require('path')
 const chalk     = require('chalk');
 const symbols   = require('log-symbols');
 const program   = require('commander')
@@ -17,7 +18,6 @@ program.command("init <ProjectName>")
             console.log(symbols.warning, chalk.red(`文件${projectName}已经存在`)); 
         }
     })
-
 
 program.parse(process.argv)
 
